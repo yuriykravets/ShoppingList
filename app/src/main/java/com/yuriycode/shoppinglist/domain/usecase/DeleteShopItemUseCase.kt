@@ -1,10 +1,11 @@
 package com.yuriycode.shoppinglist.domain.usecase
 
+import com.yuriycode.shoppinglist.domain.ShopListRepository
 import com.yuriycode.shoppinglist.domain.ShoppingItem
 
-class DeleteShopItemUseCase {
+class DeleteShopItemUseCase(private val shopListRepository:ShopListRepository) {
 
-    fun deleteShopItem(shopItem: ShoppingItem): ShoppingItem{
-        TODO()
+    fun deleteShopItem(shopItem: ShoppingItem){
+        shopListRepository.deleteShopItem(shopItem)
     }
 }

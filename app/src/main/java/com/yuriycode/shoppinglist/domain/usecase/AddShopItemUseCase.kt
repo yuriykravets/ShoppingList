@@ -1,10 +1,11 @@
 package com.yuriycode.shoppinglist.domain.usecase
 
+import com.yuriycode.shoppinglist.domain.ShopListRepository
 import com.yuriycode.shoppinglist.domain.ShoppingItem
 
-class AddShopItemUseCase {
+class AddShopItemUseCase(private val shopListRepository:ShopListRepository) {
 
     fun addShopItem(shopItem: ShoppingItem) {
-        TODO()
+        shopListRepository.addShopItem(shopItem)
     }
 }
